@@ -1,2 +1,2 @@
 import openai
-OPENAI_API_KEY = KEY1
+OPENAI_API_KEY = "KEY1"
