@@ -13,4 +13,4 @@ langchain-openai
 Pillow
 
 # Other Utilities
-base64
+pybase64
