@@ -1,2 +1,2 @@
 import openai
-OPENAI_API_KEY = ""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
+OPENAI_API_KEY = KEY1
