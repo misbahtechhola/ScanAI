@@ -1,2 +1,2 @@
 import openai
-OPENAI_API_KEY = ${{ secrets.KEY1}}
+OPENAI_API_KEY = "${{ secrets.KEY1}}"
