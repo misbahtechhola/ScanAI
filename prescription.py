@@ -17,7 +17,8 @@ import pandas as pd
 import shutil
 from openai import OpenAI
 
-os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+OpenAI.api_key = os.getenv("OPENAI_API_KEY")
+#os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 globals.set_debug(False)
 
 parser = None
