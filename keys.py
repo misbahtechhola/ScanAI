@@ -1,2 +1,2 @@
 import openai
-OPENAI_API_KEY = "${{ secrets.KEY1}}"
+OPENAI_API_KEY = "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"

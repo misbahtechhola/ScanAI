@@ -17,8 +17,7 @@ import pandas as pd
 import shutil
 from openai import OpenAI
 
-OpenAI.api_key = os.getenv("OPENAI_API_KEY")
-#os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 globals.set_debug(False)
 
 parser = None
@@ -68,7 +67,7 @@ load_images_chain = TransformChain(
 @chain
 def image_model(inputs: dict) -> str | list[str] | dict:
     """Invoke model with images and prompt."""
-    model = ChatOpenAI(api_key=os.getenv("OPENAI_API_KEY"), model="gpt-4o")
+    model = ChatOpenAI(api_key=os.environ["OPENAI_API_KEY"], model="gpt-4o")
     image_urls = [{"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img}"}} for img in inputs['images']]
     prompt = """
     You are an expert medical transcriptionist specializing in deciphering and accurately transcribing handwritten medical prescriptions. Your role is to meticulously analyze the provided prescription images and extract all relevant information with the highest degree of precision.
